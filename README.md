@@ -1,7 +1,3 @@
----
-title: Intraday Options Research Engine
----
-
 # Intraday Options Research Engine
 
 A research and backtesting engine developed alongside a live same-day-expiry options trading system for same-day-expiry index options,
