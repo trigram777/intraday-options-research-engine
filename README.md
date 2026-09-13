@@ -10,6 +10,36 @@ the part that had to be correct for any of the results to mean anything.
 
 ---
 
+## Stack Overview
+
+```mermaid
+flowchart LR
+
+    subgraph Research["Historical Research Stack"]
+        A[ThetaData / IBKR Data]
+        B[Session & Path Model]
+        C[Broker / Fill Simulation]
+        D[Strategy Runner]
+        E[Parameter Search]
+        F[Walk-Forward Validation]
+        G[Metrics / Results Explorer]
+
+        A --> B --> C --> D --> E --> F --> G
+    end
+
+    subgraph Live["Live Trading Stack"]
+        H[IBKR Market Data]
+        I[Execution & Risk Engine]
+        J[PyQt / TUI Frontends]
+
+        H --> I --> J
+    end
+
+    D -. shared strategy concepts .-> I
+```
+
+---
+
 ## Start here
 
 **→ [`METHODOLOGY.md`](METHODOLOGY.md)** — the condensed research record. What the
