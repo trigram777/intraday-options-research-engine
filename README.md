@@ -181,20 +181,3 @@ profitability is made or implied.
 ## Contact
 
 C.L. Coleman :  [Email](mailto:github@hepteract.com)
-
-
-<script type="module">
-  Array.from(document.getElementsByClassName("language-mermaid")).forEach(element => {
-    element.classList.add("mermaid");
-  });
-
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-
-  const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: dark ? 'dark' : 'neutral',
-    darkMode: dark
-  });
-</script>
