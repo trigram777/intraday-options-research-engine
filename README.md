@@ -1,7 +1,7 @@
-# ABOT -- Intraday Options Research Engine
+# Intraday Options Research Engine
 
-A backtesting engine and live trading system for same-day-expiry index options,
-built from scratch over a decade of tick data.
+A research and backtesting engine developed alongside a live same-day-expiry options trading system for same-day-expiry index options,
+built from scratch over nearly a decade of tick data.
 
 This repository contains the **research infrastructure** — the engine, its test
 suite, and the methodology record. The strategies it was built to evaluate are
@@ -77,14 +77,15 @@ python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 ```
 
 ```
-293 passed, 12 skipped in 7.80s
+Public research-engine suite: 293 passed / 12 production-data skips.
+Combined research + private live-application suites: ~2,000 tests.
 ```
 
 The first run takes about 35 seconds because it builds a **synthetic sample
 dataset** — 500 sessions of option chains and index bars, in the layout the
 engine expects. After that the suite runs in about three seconds.
 
-The dataset is not committed. It is ~320 MB, it is fully determined by a seed,
+The dataset is not committed. It is ~70 MB, it is fully determined by a seed,
 and a 300-line generator is smaller than its own output, so the repository
 ships `tools/make_sample_data.py` and builds the data on first use. It is
 synthetic because the production panel comes from a commercial feed whose
@@ -116,10 +117,14 @@ lookahead guards — runs against the sample data.
 Recordings of the live interfaces running in their built-in demo modes — synthetic
 sessions on an accelerated clock, no broker connection:
 
-- [**P&L explorer**](https://htmlpreview.github.io/?https://github.com/trigram777/ABOT/blob/main/explorer/results/explorer.html) — a browser tool for exploring exit policies over a large panel
-  of historical entries
-- [**Trading desktop**](https://raw.githubusercontent.com/trigram777/ABOT/refs/heads/main/media/Frontend.gif) (Qt) — dashboard and live chart
-- [**Terminal interface**](https://raw.githubusercontent.com/trigram777/ABOT/refs/heads/main/media/TUI.gif) (Terminal) — Automated TUI frontend
+- [**P&L explorer**](https://htmlpreview.github.io/?https://github.com/trigram777/ABOT/blob/main/explorer/results/explorer.html) — a browser tool for exploring exit policies over a large panel of historical entries
+
+- **QT Desktop Frontend**
+
+  <img src="media/Frontend.gif" width="1024" alt="Dashboard and Charting Frontend in QT">
+- **Terminal Frontend**
+
+  <img src="media/TUI.gif" width="1024" alt="TUI Dashboard in Terminal">
 
 ---
 
@@ -145,5 +150,5 @@ profitability is made or implied.
 
 ## Contact
 
-C.L. Coleman :  [Email](mailto:github@hepteract.com), [Discord](https://discord.com/users/1030258082363744356), [WhatsApp](https://wa.me/4242252799), [LINE](https://line.me/ti/p/xyhameAPJS)
+C.L. Coleman :  [Email](mailto:github@hepteract.com)
 
