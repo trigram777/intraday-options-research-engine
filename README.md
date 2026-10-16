@@ -1,4 +1,4 @@
-Portfolio has moved to [](https://hepteract.com) 
+Portfolio has moved to [hepteract.com](https://hepteract.com) 
 
 ---
 
